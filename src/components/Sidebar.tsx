@@ -2,10 +2,15 @@ import { Home, BookOpen, GraduationCap, CreditCard, Calendar, LogOut, Users, Set
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
-export default function Sidebar() {
+// 1. Definimos las propiedades que recibirá el Sidebar
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const { role, logout } = useAuth();
 
-  // Definición de menús por rol
   const menus = {
     alumno: [
       { name: 'Dashboard', icon: Home, path: '/' },
@@ -39,9 +44,14 @@ export default function Sidebar() {
   const currentMenu = role ? menus[role] : menus.alumno;
 
   return (
-    <aside className="w-72 bg-brand-green text-white flex flex-col h-screen fixed shadow-xl z-20">
+    <aside 
+      // 2. Se aplican clases condicionales para la transformación en el eje X
+      className={`w-72 bg-brand-green text-white flex flex-col h-screen fixed shadow-xl z-40 transition-transform duration-300 ease-in-out ${
+        isOpen ? 'translate-x-0' : '-translate-x-full'
+      } md:translate-x-0`}
+    >
       <div className="p-6 border-b border-brand-dark flex items-center gap-4">
-        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-inner">
+        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-inner flex-shrink-0">
           <span className="text-brand-green font-bold text-xl">EIC</span>
         </div>
         <div>
@@ -59,6 +69,7 @@ export default function Sidebar() {
           <NavLink
             key={item.name}
             to={item.path}
+            onClick={onClose} // 3. Cierra el menú al hacer clic en móvil
             className={({ isActive }) =>
               `flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 ${
                 isActive 
@@ -75,7 +86,10 @@ export default function Sidebar() {
 
       <div className="p-4 border-t border-brand-dark">
         <button 
-          onClick={logout}
+          onClick={() => {
+            onClose();
+            logout();
+          }}
           className="flex items-center gap-3 px-4 py-2 w-full text-left hover:bg-brand-dark rounded-lg transition-colors text-brand-light"
         >
           <LogOut size={20} />
