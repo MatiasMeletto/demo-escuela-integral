@@ -1,3 +1,7 @@
+# Demo for institutional organization
+
+This repository has a visual demo design for a specific school, nothing more than this really.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
