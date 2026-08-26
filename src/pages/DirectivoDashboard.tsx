@@ -8,7 +8,7 @@ export default function DirectivoDashboard() {
         <p className="text-gray-500">Métricas institucionales y estado financiero</p>
       </div>
 
-      {/* Tarjetas de Indicadores Clave (KPIs) */}
+      {/* Tarjetas de KPIs */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm flex items-center gap-4">
           <div className="p-3 bg-blue-50 text-blue-600 rounded-lg">
@@ -54,14 +54,14 @@ export default function DirectivoDashboard() {
       {/* Contenido Principal */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
-        {/* Gráfico Simulado de Ingresos */}
+        {/* Grafico Simulado de Ingresos */}
         <div className="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 p-6">
           <h3 className="font-bold text-gray-800 mb-4 pb-2 border-b">Flujo de Ingresos (Últimos 6 meses)</h3>
           <div className="h-64 flex items-end justify-between gap-4 mt-8 pb-6 border-b border-dashed border-gray-200 relative">
             {/* Referencia horizontal */}
             <div className="absolute w-full top-1/2 border-t border-dashed border-gray-100 -z-10"></div>
             
-            {/* Barras de datos estáticas */}
+            {/* Barras de datos estaticas */}
             {[40, 55, 45, 60, 75, 65].map((height, i) => (
               <div key={i} className="w-full bg-brand-light rounded-t-md relative flex flex-col justify-end h-full">
                 <div 

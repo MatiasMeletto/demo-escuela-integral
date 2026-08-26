@@ -7,7 +7,7 @@ const CHILDREN = [
 ];
 
 export default function ParentDashboard() {
-  const [activeChild, setActiveChild] = useState(CHILDREN[0]);
+  const [activeChild] = useState(CHILDREN[0]);
 
   return (
     <div className="space-y-6">
