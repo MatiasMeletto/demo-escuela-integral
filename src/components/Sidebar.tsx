@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { 
-  Home, BookOpen, GraduationCap, CreditCard, Calendar, LogOut, Users, Settings, 
+  Home, BookOpen, GraduationCap, CreditCard, Calendar, LogOut, Users, 
   FileText, ClipboardList, User, Table, Repeat, Bookmark, Mail, CalendarDays, 
   Map, Library, Activity, CheckSquare, Eye, Bell, MessageSquare, ClipboardType, 
   CheckCircle, HelpCircle, PieChart, Clock, Folder, UserMinus, Shield, ChevronDown, ChevronUp
