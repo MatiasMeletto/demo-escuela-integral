@@ -37,7 +37,7 @@ export default function Login() {
                 type="text" 
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder="alumno, padre, profesor o directivo"
+                placeholder="alumno, padre, profesor o administrador"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-brand-green outline-none"
               />
             </div>

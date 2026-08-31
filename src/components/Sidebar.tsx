@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { 
   Home, BookOpen, GraduationCap, CreditCard, Calendar, LogOut, Users, Settings, 
@@ -22,6 +22,7 @@ type MenuItem = {
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const { role, logout } = useAuth();
+  const navigate = useNavigate();
   const [openSubMenus, setOpenSubMenus] = useState<Record<string, boolean>>({});
 
   const toggleSubMenu = (menuName: string) => {
@@ -337,6 +338,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           onClick={() => {
             onClose();
             logout();
+            navigate('/');
           }}
           className="flex items-center gap-3 px-4 py-2 w-full text-left hover:bg-brand-dark rounded-lg transition-colors text-brand-light"
         >
