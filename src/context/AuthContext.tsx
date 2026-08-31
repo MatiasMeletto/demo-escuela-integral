@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, type ReactNode } from 'react';
 
-type Role = 'alumno' | 'padre' | 'profesor' | 'directivo' | null;
+type Role = 'alumno' | 'padre' | 'profesor' | 'administrador' | null;
 
 interface AuthContextType {
   role: Role;
@@ -14,10 +14,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [role, setRole] = useState<Role>(null);
 
   const login = (username: string, password: string) => {
-    if (password.trim() !== '') return false; // Exigencia: Contraseña en blanco
+    if (password.trim() !== '') return false;
     
     const normalizedUser = username.toLowerCase().trim();
-    if (['alumno', 'padre', 'profesor', 'directivo'].includes(normalizedUser)) {
+    if (['alumno', 'padre', 'profesor', 'administrador'].includes(normalizedUser)) {
       setRole(normalizedUser as Role);
       return true;
     }

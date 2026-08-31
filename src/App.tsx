@@ -28,7 +28,7 @@ function AppRoutes() {
 
   // Componentes Condicionales basados en el Rol
   const DashboardComponent = 
-    role === 'directivo' ? <DirectivoDashboard /> : 
+    role === 'administrador' ? <DirectivoDashboard /> : 
     role === 'profesor' ? <TeacherDashboard /> : 
     role === 'padre' ? <ParentDashboard /> : 
     <Dashboard />;

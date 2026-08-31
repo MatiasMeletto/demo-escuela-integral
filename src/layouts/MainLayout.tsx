@@ -17,7 +17,7 @@ export default function MainLayout({ children }: LayoutProps) {
     alumno: { name: 'Tomás Pérez', subtitle: '6to Año - Secundaria' },
     padre: { name: 'Martín Pérez', subtitle: 'Tutor de Tomás Pérez' },
     profesor: { name: 'Prof. Ana García', subtitle: 'Dpto. de Ciencias' },
-    directivo: { name: 'Lic. Carlos Gómez', subtitle: 'Director Académico' },
+    administrador: { name: 'Lic. Carlos Gómez', subtitle: 'Director General' },
   };
 
   const profile = role ? userProfiles[role] : userProfiles.alumno;
