@@ -40,7 +40,7 @@ export default function MainLayout({ children }: LayoutProps) {
       <div className="flex-1 ml-0 md:ml-72 flex flex-col min-w-0">
         
         {/* Encabezado: ajustamos paddings y agregamos botón hamburguesa */}
-        <header className="h-20 bg-white shadow-sm flex items-center justify-between px-4 md:px-8 z-10 sticky top-0">
+        <header className="h-20 bg-[#F2F2E6] flex items-center justify-between px-4 md:px-8 z-10 sticky top-0">
           <div className="flex items-center gap-4">
             <button 
               onClick={() => setIsSidebarOpen(true)}
@@ -48,16 +48,15 @@ export default function MainLayout({ children }: LayoutProps) {
             >
               <Menu size={24} />
             </button>
-            <span className="text-sm text-gray-500 font-medium hidden sm:block">Ciclo Lectivo 2026</span>
           </div>
           
           <div className="flex items-center gap-4 md:gap-6">
             <button className="relative p-2 text-gray-400 hover:text-brand-green transition-colors">
               <Bell size={24} />
-              <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white"></span>
+              <span className="absolute top-1 right-1 w-2 h-2 bg-red-400 rounded-full"></span>
             </button>
             
-            <div className="flex items-center gap-3 md:border-l border-gray-200 md:pl-6">
+            <div className="flex items-center gap-3 md:border-l border-brand-green/30 md:pl-6">
               <div className="text-right hidden md:block">
                 <p className="text-sm font-bold text-gray-700">{profile.name}</p>
                 <p className="text-xs text-gray-500">{profile.subtitle}</p>
@@ -70,7 +69,7 @@ export default function MainLayout({ children }: LayoutProps) {
         </header>
 
         {/* 5. Ajuste de padding del contenedor principal para móviles */}
-        <main className="flex-1 p-4 md:p-8 overflow-x-hidden">
+        <main className="flex-1 p-4 md:p-8 overflow-x-hidden bg-[#F2F2E6]">
           {children}
         </main>
       </div>

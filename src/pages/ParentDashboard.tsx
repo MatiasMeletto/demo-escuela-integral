@@ -46,14 +46,14 @@ export default function ParentDashboard() {
               <h3 className="text-xl font-bold text-gray-800">{activeChild.name}</h3>
               <p className="text-brand-green font-medium mb-3">{activeChild.grade}</p>
               <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                <span className="px-3 py-1 bg-green-50 text-green-700 text-sm font-medium rounded-full border border-green-200">
+                <span className="px-3 py-1 bg-green-50 text-black text-sm font-medium rounded-full border border-green-200">
                   Asistencia: 98%
                 </span>
-                <span className="px-3 py-1 bg-blue-50 text-blue-700 text-sm font-medium rounded-full border border-blue-200">
+                <span className="px-3 py-1 bg-blue-50 text-black text-sm font-medium rounded-full border border-blue-200">
                   Promedio: 8.75
                 </span>
                 {activeChild.status === 'warning' && (
-                  <span className="px-3 py-1 bg-red-50 text-red-700 text-sm font-medium rounded-full border border-red-200">
+                  <span className="px-3 py-1 bg-red-50 text-black text-sm font-medium rounded-full border border-red-200">
                     Aviso de Conducta
                   </span>
                 )}
@@ -63,7 +63,7 @@ export default function ParentDashboard() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-              <div className="flex items-center gap-2 mb-4 text-gray-800 font-bold border-b pb-2">
+              <div className="flex items-center gap-2 mb-4 text-gray-800 font-bold border-b border-gray-400 pb-2">
                 <GraduationCap size={18} className="text-brand-green" />
                 Rendimiento Reciente
               </div>
@@ -81,7 +81,7 @@ export default function ParentDashboard() {
             </div>
 
             <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-              <div className="flex items-center gap-2 mb-4 text-gray-800 font-bold border-b pb-2">
+              <div className="flex items-center gap-2 mb-4 text-gray-800 font-bold border-b border-gray-400 pb-2">
                 <CalendarIcon size={18} className="text-brand-green" />
                 Próximos Compromisos
               </div>
@@ -115,7 +115,7 @@ export default function ParentDashboard() {
           </div>
 
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
-            <h3 className="font-bold text-gray-800 mb-4 pb-2 border-b">Comunicados</h3>
+            <h3 className="font-bold text-gray-800 mb-4 pb-2 border-b border-gray-400">Comunicados</h3>
             <div className="space-y-4 text-sm">
               <div className="border-l-2 border-brand-accent pl-3">
                 <p className="font-bold text-gray-800">Reunión de Padres (3ro Primaria)</p>

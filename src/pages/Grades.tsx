@@ -1,5 +1,3 @@
-import { BookOpen } from 'lucide-react';
-
 const MOCK_GRADES = [
   { id: 1, subject: 'Matemática Avanzada', teacher: 'Prof. García', q1: 8, q2: 9, q3: '-', final: '-' },
   { id: 2, subject: 'Historia Argentina', teacher: 'Prof. López', q1: 9, q2: 9, q3: '-', final: '-' },
@@ -33,14 +31,11 @@ export default function Grades() {
                 <th className="p-4 font-semibold text-center w-24">Final</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
+            <tbody className="divide-y divide-gray-300">
               {MOCK_GRADES.map((grade) => (
                 <tr key={grade.id} className="hover:bg-gray-50 transition-colors">
                   <td className="p-4">
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-gray-100 rounded text-gray-500">
-                        <BookOpen size={18} />
-                      </div>
                       <div>
                         <p className="font-bold text-gray-800">{grade.subject}</p>
                         <p className="text-xs text-gray-500">{grade.teacher}</p>

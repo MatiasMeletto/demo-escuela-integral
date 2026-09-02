@@ -80,7 +80,7 @@ export default function Dashboard() {
 
         {/* Panel lateral derecho (Notificaciones menores) */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-          <h3 className="font-bold text-gray-800 mb-4 pb-2 border-b">Actividad Reciente</h3>
+          <h3 className="font-bold text-gray-800 mb-4 pb-2 border-b border-gray-300">Actividad Reciente</h3>
           <div className="space-y-4">
             <div className="flex gap-3">
               <div className="w-2 h-2 mt-2 rounded-full bg-brand-green flex-shrink-0"></div>

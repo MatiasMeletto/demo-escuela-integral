@@ -49,7 +49,7 @@ function AppRoutes() {
         {/* Rutas exclusivas del rol Padre */}
         <Route path="/autorizaciones" element={<Authorizations />} />
         
-        <Route path="*" element={<div className="text-center text-gray-500 mt-20">Módulo en construcción para este rol.</div>} />
+        <Route path="*" element={<div className="text-center text-gray-500 mt-20">Módulo no construido en la demo.</div>} />
       </Routes>
     </MainLayout>
   );
