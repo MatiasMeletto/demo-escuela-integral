@@ -1,4 +1,5 @@
-import { Users, TrendingUp, AlertCircle, DollarSign, UserPlus, Megaphone, FileText, Download, Settings } from 'lucide-react';
+import { Users, TrendingUp, AlertCircle, DollarSign, Settings, FileText, Brain, Bookmark, UserCheck } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function DirectivoDashboard() {
   return (
@@ -18,22 +19,22 @@ export default function DirectivoDashboard() {
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <button className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
-            <UserPlus size={24} className="mb-2 text-brand-green" />
-            <span className="text-sm font-medium">Alta Usuario</span>
-          </button>
-          <button className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
-            <Megaphone size={24} className="mb-2 text-brand-green" />
-            <span className="text-sm font-medium">Comunicado</span>
-          </button>
-          <button className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
+          <Link to="/planillas/control" className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
             <FileText size={24} className="mb-2 text-brand-green" />
-            <span className="text-sm font-medium">Actas Finales</span>
-          </button>
-          <button className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
-            <Download size={24} className="mb-2 text-brand-green" />
-            <span className="text-sm font-medium">Reportes</span>
-          </button>
+            <span className="text-sm font-medium">Control Planillas</span>
+          </Link>
+          <Link to="/inasistencia/diario" className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
+            <UserCheck size={24} className="mb-2 text-brand-green" />
+            <span className="text-sm font-medium">Asistencia Diaria</span>
+          </Link>
+          <Link to="/eoe/ficha" className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
+            <Brain size={24} className="mb-2 text-brand-green" />
+            <span className="text-sm font-medium">Ficha E.O.E</span>
+          </Link>
+          <Link to="/pendientes/historial" className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
+            <Bookmark size={24} className="mb-2 text-brand-green" />
+            <span className="text-sm font-medium">Historial Previas</span>
+          </Link>
         </div>
       </div>
 

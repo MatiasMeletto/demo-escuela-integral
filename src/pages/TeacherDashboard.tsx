@@ -1,8 +1,15 @@
-import { BookOpen, CheckSquare, Clock, Users, MessageSquare, Calendar, Settings } from 'lucide-react';
+import { BookOpen, CheckSquare, Clock, Users, Calendar, Settings, FileSpreadsheet, CheckCircle, Inbox } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function TeacherDashboard() {
   return (
     <div className="space-y-6">
+      <div>
+        <h2 className="text-2xl font-bold text-gray-800">Panel Docente</h2>
+        <p className="text-gray-500">Resumen operativo y tareas pendientes</p>
+      </div>
+
+      {/* Sección: Panel de Acceso Rápido */}
       <div className="space-y-4">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-bold text-gray-800">Panel de acceso rápido</h3>
@@ -12,22 +19,22 @@ export default function TeacherDashboard() {
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <button className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
-            <Users size={24} className="mb-2 text-brand-green" />
-            <span className="text-sm font-medium">Tomar Asistencia</span>
-          </button>
-          <button className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
-            <CheckSquare size={24} className="mb-2 text-brand-green" />
-            <span className="text-sm font-medium">Cargar Notas</span>
-          </button>
-          <button className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
-            <MessageSquare size={24} className="mb-2 text-brand-green" />
-            <span className="text-sm font-medium">Nuevo Mensaje</span>
-          </button>
-          <button className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
+          <Link to="/planillas/cargar" className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
+            <FileSpreadsheet size={24} className="mb-2 text-brand-green" />
+            <span className="text-sm font-medium">Cargar Planillas</span>
+          </Link>
+          <Link to="/tareas/gestionar" className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
+            <CheckCircle size={24} className="mb-2 text-brand-green" />
+            <span className="text-sm font-medium">Gestión Tareas</span>
+          </Link>
+          <Link to="/mensajeria/inbox" className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
+            <Inbox size={24} className="mb-2 text-brand-green" />
+            <span className="text-sm font-medium">Bandeja Entrada</span>
+          </Link>
+          <Link to="/agenda" className="flex flex-col items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-green hover:shadow-md transition-all text-brand-dark">
             <Calendar size={24} className="mb-2 text-brand-green" />
-            <span className="text-sm font-medium">Ver Calendario</span>
-          </button>
+            <span className="text-sm font-medium">Agenda</span>
+          </Link>
         </div>
       </div>
 

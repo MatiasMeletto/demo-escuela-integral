@@ -18,6 +18,17 @@ import Authorizations from './pages/Authorizations';
 // Vistas de Profesor
 import TeacherDashboard from './pages/TeacherDashboard';
 import TeacherGrades from './pages/TeacherGrades';
+import GestionTareas from './pages/GestionTareas';
+import CargaPlanillas from './pages/CargaPlanillas';
+import AgendaDocente from './pages/AgendaDocente';
+import MensajeriaInbox from './pages/MensajeriaInbox';
+
+// Vistas de Administrador
+import ControlPlanillas from './pages/ControlPlanillas';
+import AsistenciaDiaria from './pages/AsistenciaDiaria';
+import FichaPedagogica from './pages/FichaPedagogica';
+import HistorialPendientes from './pages/HistorialPendientes';
+
 
 function AppRoutes() {
   const { role } = useAuth();
@@ -48,6 +59,16 @@ function AppRoutes() {
         
         {/* Rutas exclusivas del rol Padre */}
         <Route path="/autorizaciones" element={<Authorizations />} />
+
+        <Route path="/planillas/cargar" element={<CargaPlanillas />} />
+        <Route path="/tareas/gestionar" element={<GestionTareas />} />
+        <Route path="/mensajeria/inbox" element={<MensajeriaInbox />} />
+        <Route path="/agenda" element={<AgendaDocente />} />
+
+        <Route path="/planillas/control" element={<ControlPlanillas />} />
+        <Route path="/inasistencia/diario" element={<AsistenciaDiaria />} />
+        <Route path="/eoe/ficha" element={<FichaPedagogica />} />
+        <Route path="/pendientes/historial" element={<HistorialPendientes />} />
         
         <Route path="*" element={<div className="text-center text-gray-500 mt-20">Módulo no construido en la demo.</div>} />
       </Routes>
