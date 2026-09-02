@@ -1,4 +1,4 @@
-import { Calendar as CalendarIcon, Clock, MapPin, Users, ChevronLeft, ChevronRight, Plus } from 'lucide-react';
+import { Calendar as CalendarIcon, Clock, MapPin, ChevronLeft, ChevronRight, Plus } from 'lucide-react';
 
 const WEEK_SCHEDULE = [
   { day: 'Lunes', date: '24 Ago', events: [

@@ -1,4 +1,4 @@
-import { Plus, Paperclip, Users, Clock, CheckCircle, FileText, Search, MoreVertical } from 'lucide-react';
+import { Plus, Paperclip, Users, Clock, FileText, Search, MoreVertical } from 'lucide-react';
 
 const MOCK_TASKS = [
   { id: 1, title: 'Trabajo Práctico N° 3: Ecuaciones', course: '6to Secundaria', dueDate: 'Mañana, 23:59 hs', delivered: 24, total: 30, status: 'active' },
